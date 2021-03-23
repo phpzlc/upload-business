@@ -26,5 +26,5 @@ post_max_size = 1024M
 ```
 
 ```shell
-sudo chmod -R 777 upload/
+sudo chmod -R 777 public/upload/
 ```
