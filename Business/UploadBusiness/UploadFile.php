@@ -186,6 +186,10 @@ class UploadFile extends AbstractBusiness
 
     public static function getFileNetworkPath(ContainerInterface $container, $path)
     {
-        return $container->get('request_stack')->getCurrentRequest()->getSchemeAndHttpHost() . $container->get('request_stack')->getCurrentRequest()->getBasePath() . '/' . $path;
+        if(!empty($path)) {
+            return $container->get('request_stack')->getCurrentRequest()->getSchemeAndHttpHost() . $container->get('request_stack')->getCurrentRequest()->getBasePath() . '/' . $path;
+        }
+
+        return '';
     }
 }
