@@ -39,7 +39,7 @@ class UploadDocument extends Document
     "msg": "上传成功",
     "msgInfo": [],
     "data": {
-        "path": "upload/6092d4d963cfd.ico",
+        "path": "upload/6092d4d963cfd.ico", 
         "name": "6092d4d963cfd.ico",
         "extension": "ico",
         "mime": "image/x-icon",
