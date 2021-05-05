@@ -97,6 +97,15 @@ class UploadFile extends AbstractBusiness
         return dirname(dirname(dirname(dirname(__FILE__)))) . DIRECTORY_SEPARATOR . 'public';
     }
 
+    /**
+     * 上传方法
+     *
+     * @param string $inputName 文件上传name
+     * @param null $relatively_path 文件存储相对路径,以public目录为根,不穿默认upload
+     * @param int $fileType 文件类型
+     * @param null $save_name 文件存储名称，不传系统随机命名
+     * @return array|bool 失败返回false,成功返回文件信息
+     */
     public function upload($inputName, $relatively_path = null, $fileType = self::TYPE_IMAGE, $save_name = null)
     {
         $this->fileType = $this->getFileType();
