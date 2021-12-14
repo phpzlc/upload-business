@@ -141,7 +141,12 @@ class UploadFile extends AbstractBusiness
             Errors::setErrorMessage('上传失败,' . $this->fileType[$fileType]['title'] . '过大');
             return false;
         }else{
-            $fileSystem->chmod($file->getPathname(), 0777);
+            $fileSystem->chmod($file->getPathname(), 0755);
+        }
+        
+        if($file->getExtension() == 'php'){
+            Errors::setErrorMessage('上传失败,文件类型错误');
+            return false;
         }
 
         $file->addValidations(array(
