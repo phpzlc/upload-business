@@ -157,6 +157,8 @@ class UploadFile extends AbstractBusiness
         ));
 
         try {
+            $relatively_path = str_replace(DIRECTORY_SEPARATOR, '/', $relatively_path);
+            
             $data = array(
                 'path' =>  $relatively_path . '/' . $file->getNameWithExtension(),
                 'name'       => $file->getNameWithExtension(),
