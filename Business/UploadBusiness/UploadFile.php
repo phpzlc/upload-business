@@ -157,10 +157,10 @@ class UploadFile extends AbstractBusiness
         ));
 
         try {
-            $relatively_path = str_replace(DIRECTORY_SEPARATOR, '/', $relatively_path);
+            $path = '/' . str_replace(DIRECTORY_SEPARATOR, '/', $relatively_path) . '/' . $file->getNameWithExtension();
             
             $data = array(
-                'path' =>  $relatively_path . '/' . $file->getNameWithExtension(),
+                'path' =>  $path,
                 'name'       => $file->getNameWithExtension(),
                 'extension'  => $file->getExtension(),
                 'mime'       => $file->getMimetype(),
@@ -168,7 +168,7 @@ class UploadFile extends AbstractBusiness
                 'md5'        => $file->getMd5(),
                 'dimensions' => $file->getDimensions(),
                 'original_name' => $file->getOriginalName(),
-                'server_path' => self::getFileNetworkPath($this->container, $relatively_path . '/' . $file->getNameWithExtension())
+                'server_path' => self::getFileNetworkPath($this->container, $path)
             );
 
             $file->upload();
