@@ -22,8 +22,8 @@
       }
     },
     "require": {
-      "phpzlc/phpzlc": "1.*",
-      "phpzlc/upload": "1.*"
+      "phpzlc/phpzlc": "2.*",
+      "phpzlc/upload": "2.*"
     }
 
 }
