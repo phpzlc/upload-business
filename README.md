@@ -6,4 +6,4 @@
 
 ## 技术文档
 
-[技术文档](https://phpzlc.com/doc/module/upload-business)
+[技术文档](https://phpzlc.com/doc/zh-CN/upload-business)
