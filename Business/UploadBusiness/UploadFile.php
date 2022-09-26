@@ -43,7 +43,7 @@ class UploadFile extends AbstractBusiness
     {
         $fileTypes = array(
             self::TYPE_IMAGE => array(
-                'types' => array('image/png', 'image/gif', 'image/jpg', 'image/jpeg', 'image/x-icon'),
+                'types' => array('image/png', 'image/gif', 'image/jpg', 'image/jpeg', 'image/x-icon', 'image/webp'),
                 'size' => '10M',
                 'title' => '图片'
             ),
