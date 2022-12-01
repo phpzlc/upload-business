@@ -199,4 +199,33 @@ class UploadFile extends AbstractBusiness
 
         return '';
     }
+
+    /**
+     * 富文本内容解码-将资源路径转为绝对路径
+     *
+     * @param $content
+     * @return string
+     */
+    public static function contentDecode(ContainerInterface $container, $content)
+    {
+        if(!empty($content)){
+            return str_replace('<img src="/', '<img src="' . $container->get('request_stack')->getCurrentRequest()->getSchemeAndHttpHost() . $container->get('request_stack')->getCurrentRequest()->getBasePath() . '/', $content);
+        }
+        return '';
+    }
+
+    /**
+     * 富文本内容加码-将资源路径转为相对路径
+     *
+     * @param $content
+     * @return string
+     */
+    public static function contentEncode(ContainerInterface $container, $content)
+    {
+        if(!empty($content)){
+            return str_replace('<img src="' . $container->get('request_stack')->getCurrentRequest()->getSchemeAndHttpHost() . $container->get('request_stack')->getCurrentRequest()->getBasePath(), '<img src="', $content);
+        }
+
+        return '';
+    }
 }
