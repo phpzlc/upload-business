@@ -24,13 +24,5 @@
     "require": {
       "phpzlc/phpzlc": "2.*",
       "phpzlc/upload": "2.*"
-    },
-    "scripts":{
-      "auto-scripts": {
-        "phpzlc:flex:install upload-business": "symfony-cmd"
-      },
-      "post-install-cmd": [
-        "@auto-scripts"
-      ]
     }
 }
