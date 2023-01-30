@@ -26,7 +26,7 @@
       "phpzlc/upload": "2.*"
     },
     "scripts":{
-      "post-install-cmd": [
+      "post-package-install": [
         "@php bin/console phpzlc:flex:install upload-business"
       ]
     }
