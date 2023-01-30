@@ -27,7 +27,7 @@
     },
     "scripts":{
       "post-install-cmd": [
-        "php bin/console phpzlc:flex:install upload-business"
+        "@php bin/console phpzlc:flex:install upload-business"
       ]
     }
 }
