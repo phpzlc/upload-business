@@ -24,6 +24,10 @@
     "require": {
       "phpzlc/phpzlc": "2.*",
       "phpzlc/upload": "2.*"
+    },
+    "scripts":{
+      "post-install-cmd": [
+        "php bin/console phpzlc:flex:install upload-business"
+      ]
     }
-
 }
